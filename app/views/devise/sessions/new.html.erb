@@ -1,21 +1,28 @@
-<section class='flex flex-col justify-start gap-1 items-center h-full bg-zinc-100'>
-<h2 class='text-white text-xl font-bold p-4 bg-blue-800 w-full text-center'>Log In</h2>
+ <%= render 'layouts/nav2' %>
+<section class="login-form">
+<h2 class="text-center">Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field flex flex-col w-full">
-    <%= f.label :email, class: 'text-base text-blue-400 font-bold' %>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'p-1 border-2 border-blue-300 rounded-md' %>
-  </div>
+    <div class="d-flex flex-column align-items-center">
+ <div class= "d-flex flex-column align-items-center w-75 mb-3">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control w-75 mb-3", Placeholder:"Email" %>
+  
+    <%= f.password_field :password, autocomplete: "current-password", class: "form-control w-75", Placeholder: "Password" %>
+  
 
-  <div class="field flex flex-col">
-    <%= f.label :password, class: 'text-base text-blue-400 font-bold' %>
-    <%= f.password_field :password, autocomplete: "current-password", class: 'p-1 border-2 border-blue-300 rounded-md' %>
-  </div>
-
-  <div class="actions self-center">
-    <%= f.submit "Log in", class: 'text-slate-50 font-bold border bg-blue-400 rounded-md py-1 px-5' %>
-  </div>
+  <% if devise_mapping.rememberable? %>
+ 
+   <div class= "ml-auto">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  
+  <% end %>
+    <%= f.submit "Log in" , class: "btn btn-primary" %>
+</div>
+</div>
 <% end %>
-
+<div class="text-center"> 
 <%= render "devise/shared/links" %>
+</div>
 </section>

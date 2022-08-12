@@ -1,28 +1,23 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  subject { User.create(name: 'Ifza', email: 'ifzarasoolarain@gmail.com', password: '123456') }
+  context 'Testing validations on a single subject' do
+    subject { User.new(full_name: 'Ifza Rasool', password: '123456abc', email: 'ifzarasoolarain@gmail.com') }
+    before { subject.save }
+    after { subject.destroy }
 
-  before { subject.save }
+    it 'is valid with the inserted valid attributes' do
+      expect(subject).to be_valid
+    end
 
-  it 'subject should be valid' do
-    expect(subject).to be_valid
-  end
-
-  describe 'check for validations' do
-    it 'not valid without name' do
-      subject.name = ''
+    it 'name must not be blank' do
+      subject.full_name = nil
       expect(subject).to_not be_valid
     end
 
-    it 'have correct name' do
-      subject.name = 'Ifza'
-      expect(subject).to be_valid
-    end
-
-    it 'is not valid without password' do
-      subject.password = 'ettescents'
-      expect(subject).to be_valid
+    it 'password should have at least 6 characters' do
+      subject.password = '1abc'
+      expect(subject).to_not be_valid
     end
   end
 end

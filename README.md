@@ -1,51 +1,85 @@
-# TRAnzKT APP
-TRAnzKT App is a mobile web application that allows the user to manage his/her budget: they have a list of transactions associated with a category, so that the user can see how much money they spend and on a particular category.
+
+![](https://img.shields.io/badge/Microverse-blueviolet)
+# SuperBudget-app
+
+![image](https://github.com/sentayhu19/Budget-app/blob/dev/public/mobile001.png)
+![image](https://github.com/sentayhu19/Budget-app/blob/dev/public/mobile002.png)
 
 
-## Live Demo
- Visit live demo [here]
- 
- ## Built With
- - Ruby on Rails
- - Tailwind.CSS
- 
-## prerequisites
+### Description 
+The Super Budget app is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what. built with Ruby on Rails
+
+[Live Demo Here](https://super-budget.herokuapp.com/) 
+
+
+### Cloning the project
+
+ git clone https://github.com/sentayhu19/Budget-app <Your-Build-Directory>
 ``` 
-  Ruby
-  rails version 7.x gem package 
-```
-### Development (Running locally)
-
-- git clone the project
-
-```bash 
+- cd Budget-app
+- rails s
 ```
 
-- Install Dependencies
 
-```bash
+## Built with
+- Ruby 3.1.2 on Rails 7.0.3.1
+- PostgreSQL
+
+## Prerequisites
+
+Vscode or anyother
+Setup
+
+## Install
+    Ruby
+    Rails
+
+### Development Database
+
+```sh
+# Create user
+sudo -u postgres createuser -e ced00 -s
+# Load the schema
+rails db:schema:load
+#----- If you want prefer this approach
+# Create the database
+rake db:create
+# Create database Migration
+rails db:migrate
+```
+
+### Run
+
+```sh
+rails s
+```
+
+## Run tests
+```sh
 bundle install
+rspec
 ```
 
-👤 **Ifza Rasool**
+## Author
 
+👤 **Sentayhu Berhanu**
 
+- GitHub: [@sentayhu19](https://github.com/sentayhu19)
+- LinkedIn: [sentayhu-berhanu](https://www.linkedin.com/in/sentayhu-berhanu-6376579a/)
+
+## Acknowledgment
+For the desgin of this app thanks to the author of [the original design](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)) 
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!
+Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page].
+Feel free to check the [issues page](https://github.com/sentayhu19/Budget-app/issues).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-- Thanks [Gregoire Vella on Behance](https://www.behance.net/gregoirevella) for the original design idea.
-- Thanks to my morning session partners, coding partners and teammates.
-
 ## 📝 License
-[MIT licensed](https://github.com/IfzaRasool/budget-app/blob/main/LICENSE).
 
-
+This project is [MIT](./MIT.md) licensed.

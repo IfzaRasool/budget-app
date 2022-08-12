@@ -1,13 +1,15 @@
-# frozen_string_literal: true
-
 Rails.application.routes.draw do
-  devise_for :users, controllers: { sessions: 'sessions' }
-  resources :users, only: %i[index]
-
-  resources :categories, only: %i[index show new create destroy] do
-    resources :transactions, only: %i[new create destroy]
+  resources :categories_transaction1s
+  resources :transactions1s
+  resources :categories
+  authenticated :user do
+    root to: 'categories#index'
   end
+  unauthenticated :user do
+    root to: "splashs#index", as: :unauthenticated_root
+  end
+  devise_for :users
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  resources :splash, only: %i[index]
-  root 'splash#index'
+  # Defines the root path route ("/")
 end

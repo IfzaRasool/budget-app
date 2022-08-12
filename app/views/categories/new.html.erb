@@ -1,6 +1,9 @@
-<section class='flex flex-col justify-start gap-4 items-center h-full bg-blue-100'>
-  <h1 class='text-white text-xl font-bold p-4 bg-blue-800 w-full text-center'>New Category</h1>
-  <div>
-    <%= render "form", category: @category %>
-  </div>
-</section>
+<h1 class="text-center">New category</h1>
+
+<%= render "form", category: @category %>
+
+<br>
+
+<div class="text-center">
+  <%= link_to "Back to categories", categories_path %>
+</div>
