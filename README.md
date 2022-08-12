@@ -1,20 +1,16 @@
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
-# SuperBudget-app
-
-![image](https://github.com/sentayhu19/Budget-app/blob/dev/public/mobile001.png)
-![image](https://github.com/sentayhu19/Budget-app/blob/dev/public/mobile002.png)
-
+# Budget-app
 
 ### Description 
-The Super Budget app is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what. built with Ruby on Rails
+The Baig Budget app is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what. built with Ruby on Rails
 
 [Live Demo Here](https://super-budget.herokuapp.com/) 
 
 
 ### Cloning the project
 
- git clone https://github.com/sentayhu19/Budget-app <Your-Build-Directory>
+ git clone https://github.com/IfzaRasool/budget-app.git <Your-Build-Directory>
 ``` 
 - cd Budget-app
 - rails s
@@ -62,10 +58,10 @@ rspec
 
 ## Author
 
-👤 **Sentayhu Berhanu**
-
-- GitHub: [@sentayhu19](https://github.com/sentayhu19)
-- LinkedIn: [sentayhu-berhanu](https://www.linkedin.com/in/sentayhu-berhanu-6376579a/)
+👤 **IFZA Rasool**
+- GitHub: [@ifzarasool](https://github.com/IfzaRasool
+- Twitter: [@ifzaarain](https://twitter.com/ifzaarain)
+- LinkedIn: [@ifza-arain]https://www.linkedin.com/in/ifza-arain/
 
 ## Acknowledgment
 For the desgin of this app thanks to the author of [the original design](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)) 
@@ -74,7 +70,7 @@ For the desgin of this app thanks to the author of [the original design](https:/
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/sentayhu19/Budget-app/issues).
+Feel free to check the [issues page](https://github.com/IfzaRasool/budget-app/issues).
 
 ## Show your support
 
